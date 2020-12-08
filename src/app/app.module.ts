@@ -1,18 +1,22 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { HttpClientModule } from '@angular/common/http';
 
 import { AppComponent } from './app.component';
-import { HelloWorldComponent } from './hello-world/hello-world.component';
+import { FetchItemsService } from './fetch-items.service';
+import { ItemsListComponent } from './items-list/items-list.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    HelloWorldComponent
+    ItemsListComponent,
+    
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    HttpClientModule
   ],
-  providers: [],
+  providers: [FetchItemsService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

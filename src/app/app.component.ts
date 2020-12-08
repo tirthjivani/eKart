@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-import { HelloWorldComponent } from './hello-world/hello-world.component';
 
 @Component({
   selector: 'app-root',
@@ -8,4 +7,8 @@ import { HelloWorldComponent } from './hello-world/hello-world.component';
 })
 export class AppComponent {
   title = 'tirth';
+  messageAdded = '';
+  onClick() {
+    this.messageAdded = 'Item added to cart!!';
+  }
 }
