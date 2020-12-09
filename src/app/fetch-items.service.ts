@@ -9,8 +9,8 @@ import { throwError as _throw } from 'rxjs';
   providedIn: 'root',
 })
 export class FetchItemsService {
-  // private _url: string = 'https://fakestoreapi.com/products';
-  private _url: string = '/assets/data/items.json';
+  private _url: string = 'https://fakestoreapi.com/products';
+  // private _url: string = '/assets/data/items.json';
   constructor(private http: HttpClient) {}
 
   getItems(): Observable<IItems[]> {
