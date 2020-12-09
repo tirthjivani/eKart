@@ -6,5 +6,6 @@ import { Component, Input, OnInit } from '@angular/core';
   styleUrls: ['./item-block.component.css'],
 })
 export class ItemBlockComponent {
+  constructor() {}
   @Input('item-data') public item;
 }
