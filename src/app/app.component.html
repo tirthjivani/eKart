@@ -13,8 +13,10 @@
     <div style="font-size: 40px; font-weight: 600; color: red">eKart</div>
     <div style="font-size: 40px; font-weight: 600">.in</div>
   </h1>
-
-  <p>Cart ({{ cartTotal }})</p>
+  <div style="display: flex; flex-direction: row">
+    <p style="margin-right: 10px">Cart ({{ cartTotal }})</p>
+    <p>Total Amount ({{ amountTotal | currency: "EUR" }} )</p>
+  </div>
 </div>
 
 <app-items-list [updateCart]="updateCart"></app-items-list>

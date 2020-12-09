@@ -14,13 +14,20 @@
       {{ item.description }}
     </p>
     <p>
-      {{ item.price | currency }}
+      {{ item.price | currency: "EUR" }}
     </p>
   </mat-card-content>
-  <mat-card-actions>
+
+  <mat-card-actions
+    style="
+      display: flex;
+      flex-direction: row;
+      align-items: baseline;
+      text-align: right;
+    "
+  >
     <button mat-button (click)="onAddClickEvent()">ADD</button>
-    {{ itemCount }}
+    <div style="width: 20px">{{ item.quantity }}</div>
     <button mat-button (click)="onRemoveClickEvent()">REMOVE</button>
   </mat-card-actions>
 </mat-card>
-<br />

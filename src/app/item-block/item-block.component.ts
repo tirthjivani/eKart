@@ -12,13 +12,12 @@ export class ItemBlockComponent {
   @Input() updateCart: (item: IItems, quantity: number) => void;
 
   onAddClickEvent() {
-    console.log('clicked');
-    this.updateCart(this.item, 1);
+    this.updateCart(this.item, this.item.quantity + 1);
   }
 
   onRemoveClickEvent() {
-    this.updateCart(this.item, -1);
+    this.item.quantity === 0
+      ? alert('No item in the cart!')
+      : this.updateCart(this.item, this.item.quantity - 1);
   }
-
-  public itemCount = 1;
 }

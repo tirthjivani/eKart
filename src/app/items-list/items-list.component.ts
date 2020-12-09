@@ -14,6 +14,13 @@ export class ItemsListComponent implements OnInit {
   constructor(private _fetchItemService: FetchItemsService) {}
 
   ngOnInit() {
-    this._fetchItemService.getItems().subscribe((data) => (this.items = data));
+    this._fetchItemService.getItems().subscribe(
+      (data) => (
+        (this.items = data),
+        this.items.forEach((d) => {
+          d.quantity = 0;
+        })
+      )
+    );
   }
 }

@@ -3,7 +3,7 @@ import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { IItems } from './items';
 import { throwError as _throw } from 'rxjs';
-import { catchError } from 'rxjs/operators';
+// import { catchError } from 'rxjs/operators'
 
 @Injectable({
   providedIn: 'root',
