@@ -5,18 +5,27 @@ import { HttpClientModule } from '@angular/common/http';
 import { AppComponent } from './app.component';
 import { FetchItemsService } from './fetch-items.service';
 import { ItemsListComponent } from './items-list/items-list.component';
+import { ItemBlockComponent } from './item-block/item-block.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import {
+  MatCardModule,
+  MatCardActions,
+  MatCardContent,
+  MatCardTitle,
+  MatCardSubtitle,
+  MatCardHeader,
+} from '@angular/material/card';
+import {} from '@angular/material/button';
 
 @NgModule({
-  declarations: [
-    AppComponent,
-    ItemsListComponent,
-    
-  ],
+  declarations: [AppComponent, ItemsListComponent, ItemBlockComponent],
   imports: [
     BrowserModule,
-    HttpClientModule
+    HttpClientModule,
+    BrowserAnimationsModule,
+    MatCardModule,
   ],
   providers: [FetchItemsService],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}

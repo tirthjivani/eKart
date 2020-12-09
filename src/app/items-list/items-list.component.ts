@@ -12,6 +12,10 @@ export class ItemsListComponent implements OnInit {
   constructor(private _fetchItemService: FetchItemsService) {}
 
   ngOnInit() {
-    this._fetchItemService.getItems().subscribe((data) => (this.items = data));
+    this._fetchItemService.getItems().subscribe((data) => {
+      console.log('before', data, this.items),
+        (this.items = data),
+        console.log('after', data, this.items);
+    });
   }
 }

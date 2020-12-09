@@ -1,0 +1,16 @@
+<mat-card class="example-card">
+  <mat-card-header>
+    <mat-card-title>{{ item.title }}</mat-card-title>
+    <mat-card-subtitle>{{ item.category }}</mat-card-subtitle>
+  </mat-card-header>
+  <img mat-card-image src={{item.image}} alt="Item Photo" />
+  <mat-card-content>
+    <p>
+      {{ item.description }}
+    </p>
+  </mat-card-content>
+  <mat-card-actions>
+    <button mat-button>ADD</button>
+    <button mat-button>REMOVE</button>
+  </mat-card-actions>
+</mat-card>
