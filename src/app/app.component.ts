@@ -7,8 +7,18 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'tirth';
+  cartTotal = 10;
   messageAdded = '';
-  onClick() {
+
+  updateCart = (item, quantity): void => {
+    console.log(item, quantity);
+  };
+
+  public onAdd() {
     this.messageAdded = 'Item added to cart!!';
+  }
+
+  public onRemove() {
+    this.messageAdded = 'Item removed to cart!!';
   }
 }

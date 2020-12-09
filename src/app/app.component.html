@@ -1,8 +1,25 @@
-<h1>Items</h1>
+<div
+  style="
+    display: flex;
+    align-items: baseline;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 50px;
+    margin-left: 90px;
+    margin-right: 90px;
+  "
+>
+  <h1 style="display: flex; align-items: baseline">
+    <div style="font-size: 40px; font-weight: 600; color: red">eKart</div>
+    <div style="font-size: 40px; font-weight: 600">.in</div>
+  </h1>
 
-<app-items-list></app-items-list>
+  <p>Cart ({{ cartTotal }})</p>
+</div>
 
-<button (click)="onClick()">Click me!</button>
+<app-items-list [updateCart]="updateCart"></app-items-list>
+
+<!-- <button (click)="onClick()">Click me!</button> -->
 <p>
   {{ messageAdded }}
 </p>

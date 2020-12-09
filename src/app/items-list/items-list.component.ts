@@ -1,5 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { FetchItemsService } from '../fetch-items.service';
+import { IItems } from '../items';
 
 @Component({
   selector: 'app-items-list',
@@ -8,14 +9,11 @@ import { FetchItemsService } from '../fetch-items.service';
 })
 export class ItemsListComponent implements OnInit {
   public items = [];
+  @Input() updateCart: (item: IItems, quantity: number) => void;
 
   constructor(private _fetchItemService: FetchItemsService) {}
 
   ngOnInit() {
-    this._fetchItemService.getItems().subscribe((data) => {
-      console.log('before', data, this.items),
-        (this.items = data),
-        console.log('after', data, this.items);
-    });
+    this._fetchItemService.getItems().subscribe((data) => (this.items = data));
   }
 }
