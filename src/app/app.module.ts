@@ -8,9 +8,11 @@ import { FetchItemsService } from './fetch-items.service';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatCardModule } from '@angular/material/card';
 import { MatButtonModule } from '@angular/material/button';
+import { CartListComponent } from './cart-list/cart-list.component';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
-  declarations: [AppComponent, routingComponents],
+  declarations: [AppComponent, routingComponents, CartListComponent],
   imports: [
     BrowserModule,
     HttpClientModule,
@@ -18,6 +20,7 @@ import { MatButtonModule } from '@angular/material/button';
     AppRoutingModule,
     MatCardModule,
     MatButtonModule,
+    ReactiveFormsModule,
   ],
   providers: [FetchItemsService],
   bootstrap: [AppComponent],
