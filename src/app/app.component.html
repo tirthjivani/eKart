@@ -13,19 +13,13 @@
     <div style="font-size: 40px; font-weight: 600; color: red">eKart</div>
     <div style="font-size: 40px; font-weight: 600">.in</div>
   </h1>
-  <!-- <div style="display: flex; flex-direction: row">
-    <p style="margin-right: 10px">Cart ({{ cartTotal }})</p>
-    <p>Total Amount ({{ amountTotal | currency: "EUR" }} )</p>
-  </div> -->
-  <nav>
-    <a routerLink="/browse" routerLinkActive="active">Home</a>
-    <a routerLink="/cart" routerLinkActive="active">Cart</a>
-    <a routerLink="/contact" routerLinkActive="active">Contact Us</a>
-  </nav>
+  <div style="display: flex; flex-direction: row">
+    <nav>
+      <a routerLink="/browse" routerLinkActive="active">Home</a>
+      <a routerLink="/cart" routerLinkActive="active">Cart</a>
+      <a routerLink="/contact" routerLinkActive="active">Contact Us</a>
+    </nav>
+  </div>
 </div>
 
 <router-outlet></router-outlet>
-
-<!-- <app-items-list [updateCart]="updateCart"></app-items-list> -->
-
-<!-- <button (click)="onClick()">Click me!</button> -->
