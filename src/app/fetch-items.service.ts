@@ -15,8 +15,6 @@ export class FetchItemsService {
 
   getItems(): Observable<IItems[]> {
     return this.http.get<IItems[]>(this._url);
-    //return this.http.get<IItems[]>(this._url);
-    // .catch(this.errorHandler);
   }
 
   errorHandler(error: HttpErrorResponse) {

@@ -1,1 +1,8 @@
-<app-items-list [updateCart]="updateCart"></app-items-list>
+<div style="display: flex; flex-wrap: wrap; justify-content: center">
+  <div *ngFor="let item of items" style="margin: 20px">
+    <app-item-block
+      [item-data]="item"
+      [updateCart]="updateCart"
+    ></app-item-block>
+  </div>
+</div>

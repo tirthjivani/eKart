@@ -11,7 +11,7 @@ import { MatButtonModule } from '@angular/material/button';
 import { CartListComponent } from './cart-list/cart-list.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { ItemBlockComponent } from './item-block/item-block.component';
-import { ItemsListComponent } from './items-list/items-list.component';
+import { CartDataService } from './cart-data.service';
 
 @NgModule({
   declarations: [
@@ -19,7 +19,6 @@ import { ItemsListComponent } from './items-list/items-list.component';
     routingComponents,
     CartListComponent,
     ItemBlockComponent,
-    ItemsListComponent,
   ],
   imports: [
     BrowserModule,

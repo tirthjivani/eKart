@@ -1,5 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { IItems } from '../items';
+import { CartDataService } from '../cart-data.service';
 
 @Component({
   selector: 'app-item-block',
@@ -7,17 +7,18 @@ import { IItems } from '../items';
   styleUrls: ['./item-block.component.css'],
 })
 export class ItemBlockComponent {
-  constructor() {}
+  constructor(private _cartService: CartDataService) {}
   @Input('item-data') public item;
-  @Input() updateCart: (item: IItems, quantity: number) => void;
 
   onAddClickEvent() {
-    this.updateCart(this.item, this.item.quantity + 1);
+    this.item.quantity = this.item.quantity + 1;
+    this._cartService.updateCart(this.item);
   }
 
   onRemoveClickEvent() {
     this.item.quantity === 0
       ? alert('No item in the cart!')
-      : this.updateCart(this.item, this.item.quantity - 1);
+      : (this.item.quantity = this.item.quantity - 1),
+      this._cartService.updateCart(this.item);
   }
 }
